@@ -1,0 +1,17 @@
+step 1 : install virtual environment 
+        pip install virtualenv
+step 2 : give name for virtual environment
+        virtualenv envdjango
+step 3 : activate the virtual environment 
+        envdjango\Scripts\activate
+step 4 : install django framework
+        pip install django
+step 5 : create first project and give name
+        django-admin startproject firstproject
+step 6 : create app and give name
+        python manage.py startapp firstapp
+step 7 : add app name in settings.py in INSTALLED_APP 
+        'firstapp'
+step 8 : create model database and convert into query
+        python manage.py makemigrations
+        python manage.py migrate

@@ -1,0 +1,24 @@
+This is used to communicate the user with our application.
+Using the request object, we can get different information about the user.
+
+request.method :
+    gives us the HTTP method the user sent which could either be get,put,patch,post or delete.
+    And using this information, we can perform conditional operations.
+
+request.GET :
+    give us access to the different parameters passed in when sending a request.
+    Eg: if we had the following url
+       https://example.com/?name=John&age=30
+    we can access name and age using request.GET.get('name') in parenthesis we can pass in age or name 
+
+request.POST :
+    We usually use it to get information from when a form sent to our server 
+
+request.COOKIES :
+    It gives us access to a dictionary containing the user's previous interaction with our server 
+
+request.FILES :
+    It gives us access to the files uploaded by the user. 
+
+response :
+    The response object is what we send back to the user which we saw when we sent back the text back to the user. 

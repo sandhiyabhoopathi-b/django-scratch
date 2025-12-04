@@ -1,0 +1,18 @@
+Model : 
+    create models, we're going to be using classes that inherit from the django model class.
+    Now we're going to define different attributes . So each attributes we define is going to correspond to a column in our database.
+    To actually create this table, we need to make what is called migrations.
+
+Migrations :
+    It is a process that converts whatever changes we make in the model.py file to our actual database.
+    To make migrations in our application
+        1. python manage.py makemigrations
+        2. python manage.py migrate
+    When we ran our application, a file called db.sqlite3 was created 
+    This is where all our models are going to be stored 
+
+Django by default uses SQLite database which ia a lightweight serverless database but Django also supports other database
+
+once created our model we have to registered our model to the admin site 
+    from .models import modelname
+    admin.site.register(modelname)

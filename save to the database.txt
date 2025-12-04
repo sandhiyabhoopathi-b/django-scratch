@@ -1,0 +1,23 @@
+Step 1 — Import Your Model
+eg: from .models import CreateBlog
+
+Step 2 — Save blog post
+Eg: def result_fun(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+
+        # Save to database
+        CreateBlog.objects.create(
+            title=title,
+            content=content
+        )
+    return redirect('home')  # go back to home page
+
+Why redirect?
+So when user refreshes the page, it won't create duplicate posts again.
+
+Step 3 — Show all blog posts
+Eg: def home_fun(request):
+    posts = CreateBlog.objects.all().order_by('-created_at')   # latest first
+    return render(request, 'home.html', {'posts': posts})

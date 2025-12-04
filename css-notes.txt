@@ -1,0 +1,37 @@
+Link separate CSS files in separate templates
+
+home.html
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+about.html
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+It must go inside a block defined in your base template (index.html), usually inside:
+
+{% block extra_css %}{% endblock %}
+
+
+If your index.html does NOT contain this block, CSS will not load.
+
+Eg:
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyBlog</title>
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+{% extends 'index.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}

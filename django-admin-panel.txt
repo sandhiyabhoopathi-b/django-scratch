@@ -1,0 +1,4 @@
+The django admin panel is an interface that has many functionalities related to our application.
+To use the admin panel, we need to first create a super user 
+    python manage.py createsuperuser
+    

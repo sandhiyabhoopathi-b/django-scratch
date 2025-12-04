@@ -1,0 +1,19 @@
+In django, there are two ways to create a view 
+    1. function-based view
+    2. class-based view
+
+function-based view :
+    we define a function and give it a name and as a parameter . we're going to pass in request.
+    Eg:  def hello_world(request):
+    -> where request is an object that is sent by the user when they're using our application
+    And when the user goes to our view , we want to return something. so what we're going to return is an HTTP response.
+    so in out function going to return an HTTP response and in parenthesis we're going to pass in what we want to return.
+    Eg: return HttpResponse("hello World")
+
+class-based view:
+    In order to use a class-based view, we need to work with inheritance.
+    First we need to do is import the view class which we're going to be inheriting from django.views import View 
+    Now we're going to define our class 
+    Eg: class HelloEthiopia(View):
+          def get(self,request):
+            return HttpResponse("Hello Ethiopia)

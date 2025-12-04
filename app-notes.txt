@@ -1,0 +1,7 @@
+App :
+    An app in django is a collection of functionalities that focus on a particular aspects of our overall projects
+Web Framework :
+    A web framework is a structure way of building web applications. It's often confused with a library.
+    The difference is that  library is a collection of functionalities that accomplish a specific task.
+    Eg: React is a library which contains different functionalities used in web development
+    A web framework, however, doesn't provide any specific functionality . It simply define a structure for writing our code 

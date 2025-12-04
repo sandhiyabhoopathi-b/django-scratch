@@ -1,0 +1,5 @@
+Templates are used to design the user interface.
+To create templates, we're going to first create a templates folder inside either app folder or project folder
+if create folder in app folder , there is no need to metion in settings.py --> when each app has own templates
+if create folder in project folder, there is need to metion in settings. py --> You have common HTML files for whole project 
+(login, base.html, navbar.html)

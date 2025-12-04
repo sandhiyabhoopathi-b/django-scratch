@@ -1,0 +1,19 @@
+MVT : - stand for Model View Template
+    This concept explains how a web application works and interacts with a client
+
+Model : 
+    This part is responsible for processing data.
+    It represents how our data is structured,stored and retrived. 
+    Simply it deals with the database part of our application.
+
+View :
+    This part is responsible for handling the user interactions with our application.
+    And the view is where we take user requests, process them, and send back responses.
+    Simply it deals with the logic part of our application.
+
+Template :
+    This part is deal with the user interface or what the user actually sees.
+    It includes the HTML markup with placeholders for different dynamic component we can add from the view parts of our application
+
+So the MVT divides the responsibilities of our web application into three parts.
+The model for managing data, the view for doing logic and the template for user interface rendering

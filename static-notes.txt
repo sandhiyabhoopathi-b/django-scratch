@@ -1,0 +1,39 @@
+First create static folder either project folder or app folder
+In settings.py type this
+
+STATIC_URL = 'static/'
+STATIC_ROOT = '/static/'
+STATICFILES_DIRS = [BASE_DIR/'static'] --> here static is your folder name
+
+then your all html 
+Before using any static file, you must load the static tag.
+
+Add this at the top of your index.html:
+
+{% load static %}
+
+eg: 
+{% load static %}
+<!Doctype html>
+<html>
+    <head>
+        <title>MyBlog</title>
+        <!-- Example: CSS from static folder -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!-- Example: Background image -->
+        <div class="hero" style="background-image: url('{% static 'images/banner.jpg' %}');">
+        </div>
+
+        {% include 'navbar.html' %}
+        
+        {% block content %}
+        {% endblock %}
+
+        {% include 'footer.html' %}
+
+        <!-- Example: JS file -->
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>

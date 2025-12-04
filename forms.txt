@@ -1,0 +1,8 @@
+Forms :
+    Forms are used to take input from the user.
+    Usually we want to take this input and store it in our database.
+    And Django makes it very simple to use forms and models together to get user information and store it.
+
+Creating forms is very similar to creating models, but instead of inheriting from the model class, we're going to be inheriting 
+from the form class
+    from django import forms

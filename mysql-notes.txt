@@ -1,0 +1,30 @@
+The first thing we need to do is install a driver to use MYSQL.
+The driver we're going to be using is MYSQL client and to install install
+    pip install mysqlclient
+       or 
+    pip install mysql-connector-python
+      or 
+    pip install pymysql
+then add to project folder __init__.py file 
+    import pymysql
+    pymysql.install_as_MySQLdb()
+
+Finally, in the settings.py file, we need to adjust the database list. 
+In settings.py , choose database
+    DATABASES = {
+        'default' : {
+            'ENGINE' : 'django.db.backends.mysql',
+            'NAME' : 'django_db',
+            'USER' : 'root',
+            'PASSWORD' : 'sandi2003',
+            'HOST' : '127.0.0.1',
+            'PORT' : '3306',
+            'OPTIONS' : {
+                'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
+            }
+        }
+    }
+
+Then open terminal and type 
+    python manage.py makemigrations
+    python manage.py migrate
